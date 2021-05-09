@@ -1,0 +1,21 @@
+{
+  "short_name": "Poke",
+  "name": "Pokeapi",
+  "icons": [
+    {
+      "src": "./img/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "theme_color": "#feca1b",
+  "background_color": "#2d323b",
+  "display": "standalone",
+  "scope": "/"
+}

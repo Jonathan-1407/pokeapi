@@ -1,0 +1,361 @@
+* {
+  margin: 0px;
+}
+/* Navigation */
+nav {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.navbar-image {
+  width: 160px;
+}
+.searchbar-container {
+  display: flex;
+  margin: 0px 10px;
+  padding: 0;
+  align-items: center;
+  flex: 1;
+  align-items: stretch;
+}
+.searchbar {
+  background: white;
+  padding-right: 20px;
+  flex: 1;
+}
+.searchbar input {
+  padding: 10px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  border: none;
+  width: 100%;
+}
+.searchbar input:focus {
+  outline: none;
+}
+.searchbar-btn button {
+  background-color: #2d323b;
+  border: none;
+  border-radius: 3px;
+  height: 100%;
+  color: #ffffff;
+  padding: 10px 12px;
+  margin-left: 20px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Responsive cards */
+.pokedex-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 18px;
+  padding: 0px 10px 20px 10px;
+}
+@media screen and (max-width: 992px) {
+  .pokedex-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .pokedex-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* Pokemon card */
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+  margin: 0.3rem;
+  border: 1px solid #efefef;
+  border-radius: 0.2rem;
+  min-width: 160px;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.089);
+}
+.pokemon-img-container {
+}
+.pokemon-img-container .pokemon-img {
+  width: 120px;
+  height: 120px;
+}
+.pokemon-type {
+  display: flex;
+}
+.pokemon-number {
+  border-radius: 1rem;
+  padding: 0.2rem 0.4rem;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.pokemon-type-text {
+  margin-right: 10px;
+  text-transform: capitalize;
+}
+
+.detail-pokemon {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 10px 10px 10px;
+  flex: 1;
+}
+.card-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-top h3 {
+  text-transform: capitalize;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.pagination-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.App {
+  font-family: sans-serif;
+  min-height: calc(100vh - 160px);
+}
+.icon {
+  width: 28px;
+  height: 28px;
+}
+.pagination-btn {
+  background: linear-gradient(to right, #ee8329, #e4453b);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin: 0px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.pokemon-heart-btn {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  background-color: rgba(45, 50, 59, 0.185);
+}
+.not-found-text {
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 20px;
+}
+/* Footer */
+footer {
+  font-family: inherit;
+  background-color: #2d323b;
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.1rem;
+}
+footer a {
+  color: #feca1b;
+  text-decoration: none;
+}
+.footer-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+/* Spinner loading */
+.spinner {
+  margin: 100px auto 0;
+  width: 100px;
+  text-align: center;
+}
+.spinner > div {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: #2d323b;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.48s;
+  animation-delay: -0.48s;
+}
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.spinner .bounce3 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+@-webkit-keyframes bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.5;
+  }
+  40% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Pokemon card colors */
+.rock {
+  background-color: rgb(148, 81, 81);
+  color: #fff;
+}
+.ghost {
+  background-color: #d7cada;
+}
+.electric {
+  background-color: rgb(255, 255, 161);
+}
+.bug {
+  background-color: #f6d6a7;
+}
+.poison {
+  background-color: #e0a7f6;
+}
+.normal {
+  background-color: #f4f4f4;
+}
+.fairy {
+  background-color: rgba(255, 192, 203, 0.863);
+}
+.fire {
+  background-color: #fbe3df;
+}
+.grass {
+  background-color: #e2f9e1;
+}
+.water {
+  background-color: #e0f1fd;
+}
+.psychic {
+  background-color: #e89fc4;
+}
+.fighting {
+  background-color: #efc49e;
+}
+.ice {
+  background-color: #d2f3ff;
+}
+.dragon {
+  background-color: #f9f9f9;
+}
+
+/* Title horizontal bar */
+.box {
+  display: flex;
+  width: 100%;
+  height: 8px;
+  margin: 5px 0px 10px 0px;
+}
+
+.box-sm {
+  height: 3px;
+  margin-top: 5px;
+  flex-grow: 5;
+  transition: all 0.8s ease-in-out;
+  cursor: pointer;
+  border-radius: 50px;
+}
+ /* Horizontal bar color */
+.ground-line {
+  background-color: #3f4048;
+}
+.rock-line {
+  background-color: #d5b45a;
+}
+.ghost-line {
+  background-color: #3f4048;
+}
+.electric-line {
+  background-color: #f6bd20;
+}
+.bug-line {
+  background-color: #eeac41;
+}
+.poison-line {
+  background-color: #a483c5;
+}
+.normal-line {
+  background-color: #a57658;
+}
+.fairy-line {
+  background-color: #d57b8b;
+}
+.fire-line {
+  background-color: #ee8329;
+}
+.grass-line {
+  background-color: #73ac31;
+}
+.water-line {
+  background-color: #5a8bcd;
+}
+.psychic-line {
+  background-color: #745062;
+}
+.fighting-line {
+  background-color: #a6954f;
+}
+.ice-line {
+  background-color: #7181c8;
+}
+.dragon-line {
+  background-color: #443e43;
+}
+
